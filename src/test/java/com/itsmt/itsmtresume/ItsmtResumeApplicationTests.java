@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.itsmt.itsmtresume;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CVprojectApplicationTests {
+class ItsmtResumeApplicationTests {
 
 	@Test
 	void contextLoads() {
