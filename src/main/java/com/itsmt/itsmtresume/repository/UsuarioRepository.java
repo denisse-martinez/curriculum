@@ -3,8 +3,9 @@ package com.itsmt.itsmtresume.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.itsmt.itsmtresume.models.User;
+import com.itsmt.itsmtresume.models.Usuario;
+
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer>{
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
 }

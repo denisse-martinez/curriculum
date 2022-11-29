@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.itsmt.itsmtresume.models.Usuario;
-import com.itsmt.itsmtresume.repository.UserRepository;
+import com.itsmt.itsmtresume.repository.UsuarioRepository;
 
 @Controller
 public class WebController {
 	
 	@Autowired
-	private UserRepository userRepository;
+	private UsuarioRepository UsuarioRepository;
 
     @RequestMapping(value = "/")
     public String index(Model model) {
     	
-    	model.addAttribute("users", userRepository.findAll());
+    	model.addAttribute("usuario", UsuarioRepository.findAll());
     	
         return "index";
     }
