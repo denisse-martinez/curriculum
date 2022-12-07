@@ -22,10 +22,10 @@ public class User {
     @Column(name = "Matricula")
     private String matricula;
 
-    @Column(name = "Nombre", nullable = true)
+    @Column(name = "Nombre", nullable = false)
 	private String nombre;
     
-    @Column(name = "Apellidos", nullable = true)
+    @Column(name = "Apellidos", nullable = false)
     private String apellidos;
 
     @Column(name = "Email")

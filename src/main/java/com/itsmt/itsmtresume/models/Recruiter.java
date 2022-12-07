@@ -3,9 +3,9 @@ package com.itsmt.itsmtresume.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.JoinTable;
+//import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -94,9 +94,10 @@ public class Recruiter {
     }
 
     //Relacion entre la clase escuela y reclutadora
-    @NotEmpty
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "school_recluiter",
-                joinColumns = @JoinColumn(name = "nombre"), 
-                inverseJoinColumns = @JoinColumn(name = "clave"))
+    //@NotEmpty
+    //@ManyToMany(fetch = FetchType.LAZY)
+    //@JoinTable(name = "school_recluiter",
+                //joinColumns = @JoinColumn(name = "recruiter_nombre"), 
+                //inverseJoinColumns = @JoinColumn(name = "school_clave")
+              //)
 }
