@@ -1,6 +1,5 @@
 package com.itsmt.itsmtresume.models;
 
-import java.security.GeneralSecurityException;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
