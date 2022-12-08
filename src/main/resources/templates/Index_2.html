@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./css/estilos2.css">
+    <link rel="stylesheet" href="./css/estilos_insertar.css">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+</head>
+<header>
+    
+</header>
+
+<body scroll=no>
+
+    <nav>
+        <p class="logo-danicodex">
+            <div class="container-buttons">
+              <a href="index.html" class="one" ></a>
+              <a href="#" class="two"></a>
+              <a href="#" class="three"></a>
+              <a href="#" class="four"></a>
+              <a href="#" class="five"></a>
+            </div></p>
+
+        <ul class="cont-ul">
+            <li>BLOG</li>
+            <li>INFORMACION</li>
+            <li class="develop">
+                DESARROLLADOR 
+                <ul class="ul-second">
+                    <li class="back">Back-End</li>
+                    <li class="front">
+                        Front-End
+                        <ul class="ul-third">
+                            <li>CSS</li>
+                            <li>HTML</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </li>
+                    <li>Full-Stack</li>
+                </ul>
+            </li>
+            <li>COMPANY</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+   <div scroll=no class="contenedor">
+    
+
+    <div class= "container scroll" >
+        <section class="questions container">
+            
+            <p class="questions__paragraph"></p>
+            <form action="prueba.sql" method="POST">
+            <section class="questions__container">
+        
+                
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Datos personales 
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <section class="questions__show">
+                            
+                            <table>
+                            <tr>
+
+                            <td><div class="sm:flex-shrink-0 pe-4">
+                                <div class="flex relative flex-col py-2 h-32 sm:h-full w-24 sm:w-32">
+                                    <div class="flex items-center mb-1">
+                                        <label class="flex-grow truncate block font-medium text-gray-600 text-sm">Foto
+
+                                        </label>
+                                    </div>
+                                    <button type="button" class="border border-transparent bg-gray-100 rounded py-2 px-3 text-base transition-colors duration-150 not-touch:hover:border-brand-500 w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center" style="outline: none;">
+                                        <div class="sr-only">Actualizar
+
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor" 
+                                    class="w-5 text-gray-400">
+                                    <path fill-rule="evenodd" d="M4 5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1.586a1 1 0 0 1-.707-.293l-1.121-1.121A2 2 0 0 0 11.172 3H8.828a2 2 0 0 0-1.414.586L6.293 4.707A1 1 0 0 1 5.586 5H4zm6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" clip-rule="evenodd">
+
+                               </path></svg>
+                              </button>
+                             </div>
+                            </div></td>
+
+                            
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                           class="flex-grow truncate block font-medium text-gray-600 text-sm">Nombre
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}"  required
+                                          name="Nombre" type="text" size="20" autocomplete="family-name" 
+                                          class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Apellidos
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Apellidos" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            </tr>
+                            <tr>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Email
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" placeholder="example@mail.com"
+                                        data-s="Email" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Dirección
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Direccion" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">CURP
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="CURP" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            </tr>
+                            <tr>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Teléfono
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Telefono" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Fecha de Nacimiento
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="FechaNacimiento" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Carrera 
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Carrera" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            </tr>
+                            <tr>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Sexo
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Sexo" type="text" size="20" 
+                                        autocomplete="family-name" class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Número de seguro social <br>
+                                        (IMSS)
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="NoIMSS" type="text" size="20" 
+                                        autocomplete="family-name" class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Titulo profecional
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="TituloProfesional" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+                            </tr>
+                            <tr>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Cedula profesional
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="CedulaProfesional" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+                            </tr>
+                           <tr>
+                           <td>
+                            <input type="submit" value="Guardar cambios">
+                           </td>
+                           </tr>
+                            </table>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Experiencia escolar 
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <section class="questions__show">
+                            
+                            <table>
+                            <tr>
+
+ 
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                           class="flex-grow truncate block font-medium text-gray-600 text-sm">Título
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}"  required
+                                          data-s="Titulo" type="text" size="20" autocomplete="family-name" 
+                                          class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Descripción
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Descripcion" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            </tr>
+                            <tr>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Número de horas del curso
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="NoHoras" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Fecha de expedición
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="FechaExpedicion" type="date" size="20" autocomplete="family-name" 
+                                        class="form-control">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Institución
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Institucion" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            </tr>
+                            <tr>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Archivo
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Telefono" type="file" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+                       
+                            </tr>
+       
+                       
+                            </table>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Experiencia Laboral
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <section class="questions__show">
+                            
+                            <table>
+
+                            <tr>
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                           class="flex-grow truncate block font-medium text-gray-600 text-sm">Puesto
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}"  required
+                                          data-s="Puesto" type="text" size="20" autocomplete="family-name" 
+                                          class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Lugar
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Lugar" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Fecha de inicio 
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" placeholder="example@mail.com"
+                                        data-s="FechaComienzo" type="date" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+                            </tr>
+
+                            <tr>
+                           
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Fecha final laboral
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="FechaTermino" type="date" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Nombre de la empresa
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="NombreEmpresa" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>                           
+                            </tr>
+
+                            <tr>           
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Descripción de las funciones
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="DescripciónFunciones" type="text" size="40" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+                            </tr>
+                        
+                       
+                            </table>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Habilidades personales
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <section class="questions__show">
+                            
+                            <table>
+                            <tr>
+
+                            
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                           class="flex-grow truncate block font-medium text-gray-600 text-sm">Tipo de habilidad
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}"  required
+                                          data-s="Tipo" type="text" size="20" autocomplete="family-name" 
+                                          class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Descripción
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Descripcion" type="text" size="50" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            </tr>
+                          
+                       
+                            </table>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Escuela 
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <section class="questions__show">
+                            
+                            <table>
+                            <tr>
+
+                            
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                           class="flex-grow truncate block font-medium text-gray-600 text-sm">Clave
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}"  required
+                                          data-s="clave" type="text" size="30" autocomplete="family-name" 
+                                          class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Nombre
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Nombre" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            </tr>
+                            <tr>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Municipio
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" placeholder="example@mail.com"
+                                        data-s="Municipio" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Estado
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Estado" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Direccion
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="Direccion" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            </tr>
+                            <tr>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Correo Electronico
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="CorreoElectronico" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                            <td><div class="w-full sm:flex-equal-width px-2">
+                                <div class="py-2">
+                                    <div class="flex items-center mb-1">
+                                        <label for="focus-id-name-%{familyName}" 
+                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Sitio web
+
+                                        </label>
+                                    </div>
+                                    <div class="relative">
+                                        <input id="focus-id-name-%{familyName}" 
+                                        data-s="SitioWeb" type="text" size="20" autocomplete="family-name" 
+                                        class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
+                                    </div>
+                                </div>
+                            </div></td>
+
+                           
+
+                            </tr>
+                       
+                            </table>
+                        </section>
+                    </div>
+                </article>
+         
+              
+            </section>
+        </form>
+    </div>
+
+     <div class="fondo2 container" >
+
+     </div>
+   </div>
+
+   <script src="./js/questions.js"></script>
+</body>
+
+</html>
+
