@@ -44,7 +44,6 @@ public class User {
     private String telefono;
 
     @Column(name = "FechaNacimiento")
-    @DateTimeFormat(iso = ISO.DATE)
     private LocalDate fechaNac;
 
     @Column(name = "Carrera")
