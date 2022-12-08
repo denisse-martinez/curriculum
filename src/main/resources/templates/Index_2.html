@@ -60,54 +60,47 @@
         <section class="questions container">
             
             <p class="questions__paragraph"></p>
-            <form th:action="@{/agregar}" th:object="${user}" method="POST">
-            <section class="questions__container">
-        
-                
-                <article class="questions__padding">
-                    <div class="questions__answer">
-                        <h3 class="questions__title">Datos personales 
-                            <span class="questions__arrow">
-                                <img src="./images/arrow.svg" class="questions__img">
-                            </span>
-                        </h3>
+            <form method="POST" th:action="@{/agregar}" th:object="${user}">
+                <section class="questions__container">
+                    <article class="questions__padding">
+                        <div class="questions__answer">
+                            <h3 class="questions__title">Datos personales 
+                                <span class="questions__arrow">
+                                    <img src="./images/arrow.svg" class="questions__img">
+                                </span>
+                            </h3>
 
-                        <section class="questions__show">
+                            <section class="questions__show">
                             
-                            <table>
-                            <tr>
-
-                            <td><div class="sm:flex-shrink-0 pe-4">
-                                <div class="flex relative flex-col py-2 h-32 sm:h-full w-24 sm:w-32">
-                                    <div class="flex items-center mb-1">
-                                        <label class="flex-grow truncate block font-medium text-gray-600 text-sm">Foto
-
-                                        </label>
-                                    </div>
-                                    <button type="button" class="border border-transparent bg-gray-100 rounded py-2 px-3 text-base transition-colors duration-150 not-touch:hover:border-brand-500 w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center" style="outline: none;">
-                                        <div class="sr-only">Actualizar
-
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor" 
-                                    class="w-5 text-gray-400">
-                                    <path fill-rule="evenodd" d="M4 5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1.586a1 1 0 0 1-.707-.293l-1.121-1.121A2 2 0 0 0 11.172 3H8.828a2 2 0 0 0-1.414.586L6.293 4.707A1 1 0 0 1 5.586 5H4zm6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" clip-rule="evenodd">
-
-                               </path></svg>
-                              </button>
-                             </div>
-                            </div></td>
-
-                            <td><div class="w-full sm:flex-equal-width px-2">
-                                <div class="py-2">
+                                <table>
+                                <tr>
+                                    <td>
+                                        <div class="sm:flex-shrink-0 pe-4">
+                                            <div class="flex relative flex-col py-2 h-32 sm:h-full w-24 sm:w-32">
+                                                <div class="flex items-center mb-1">
+                                                    <label class="flex-grow truncate block font-medium text-gray-600 text-sm">Foto</label>
+                                                </div>
+                                                <button type="button" class="border border-transparent bg-gray-100 rounded py-2 px-3 text-base transition-colors duration-150 not-touch:hover:border-brand-500 w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center" style="outline: none;">
+                                                    <div class="sr-only">Actualizar</div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 20 20" fill="currentColor" 
+                                                        class="w-5 text-gray-400">
+                                                        <path fill-rule="evenodd" d="M4 5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1.586a1 1 0 0 1-.707-.293l-1.121-1.121A2 2 0 0 0 11.172 3H8.828a2 2 0 0 0-1.414.586L6.293 4.707A1 1 0 0 1 5.586 5H4zm6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="w-full sm:flex-equal-width px-2">
+                                        <div class="py-2">
                                     <div class="flex items-center mb-1">
                                         <label for="focus-id-name-%{familyName}" 
                                            class="flex-grow truncate block font-medium text-gray-600 text-sm">Matricula
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{matricula}" id="matricula" required
-                                          name="Nombre" type="text" size="20" autocomplete="family-name" 
+                                        <input id="matricula" name="Nombre" type="text" size="20" autocomplete="family-name" required th:field="*{matricula}" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
                                 </div>
@@ -291,7 +284,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{profesion}" id="profesion" 
+                                        <input th:field="*{prefesion}" id="profesion" 
                                         data-s="TituloProfesional" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -309,7 +302,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{cedula}" id="cedula" 
+                                        <input th:field="*{cadula}" id="cedula" 
                                         data-s="CedulaProfesional" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>

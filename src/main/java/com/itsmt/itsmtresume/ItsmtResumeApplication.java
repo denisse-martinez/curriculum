@@ -11,6 +11,4 @@ public class ItsmtResumeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ItsmtResumeApplication.class, args);
 	}
-
-	
 }
