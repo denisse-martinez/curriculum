@@ -11,7 +11,7 @@ public class ResumeController {
     
     @RequestMapping(value = "/resume")
     public ModelAndView index() {
-        ModelAndView mav = new ModelAndView("index_2");
+        ModelAndView mav = new ModelAndView("Index_2");
 		User user = new User();
 		
         mav.addObject("user", user);

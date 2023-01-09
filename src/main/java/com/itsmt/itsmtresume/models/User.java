@@ -9,9 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
+import javax.validation.constraints.NotEmpty;
 
 
 @Entity
@@ -20,12 +18,15 @@ public class User {
     
     @Id
     @Column(name = "Matricula")
+    @NotEmpty 
     private String matricula;
 
-    @Column(name = "Nombre", nullable = false)
+    @Column(name = "Nombre")
+    @NotEmpty 
 	private String nombre;
     
-    @Column(name = "Apellidos", nullable = false)
+    @Column(name = "Apellidos")
+    @NotEmpty 
     private String apellidos;
 
     @Column(name = "Email")
@@ -35,24 +36,30 @@ public class User {
     private String contraseña;
 
     @Column(name = "Direccion")
+    @NotEmpty
     private String direccion;
 
     @Column(name = "CURP")
+    @NotEmpty
     private String curp;
 
     @Column(name = "Telefono")
+    @NotEmpty
     private String telefono;
 
     @Column(name = "FechaNacimiento")
     private LocalDate fechaNac;
 
     @Column(name = "Carrera")
+    @NotEmpty
     private String carrera;
 
     @Column(name = "Sexo")
+    @NotEmpty 
     private String sexo;
 
     @Column(name = "NoIMSS")
+    @NotEmpty 
     private String noIMSS;
 
     @Column(name = "TituloProfesional")

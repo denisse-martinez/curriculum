@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "escuela")
@@ -13,18 +15,23 @@ public class School {
     private String clave;
 
     @Column(name = "Nombre")
+    @NotEmpty
     private String nombre;
 
     @Column(name = "Municipio")
+    @NotEmpty
     private String municipio;
 
     @Column(name = "Estado")
+    @NotEmpty
     private String estado;
 
     @Column(name = "Direccion")
+    @NotEmpty
     private String direccion;
 
     @Column(name = "CorreoElectronico")
+    @Email
     private String correo;
 
     @Column(name = "SitioWeb")
