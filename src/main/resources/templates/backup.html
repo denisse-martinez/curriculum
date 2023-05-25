@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Respaldo base de datos de MySQL ProyectoCV</title>
+    </head>
+    <body>
+        <center>
+            <h1>Respaldar la base de datos ProyectoCV</h1>
+            <form th:action="@{/respaldo/backup}" method="POST">
+                <button type="submit" width="200px" height="25px">Respaldar</button>
+            </form>
+        </center>
+    </body>
+</html>
