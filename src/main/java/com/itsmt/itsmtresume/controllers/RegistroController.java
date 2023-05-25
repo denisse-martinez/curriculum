@@ -14,17 +14,11 @@ import com.itsmt.itsmtresume.models.Account;
 import com.itsmt.itsmtresume.repository.AccountRpository;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping(path = "/registroform")
 public class RegistroController {
 
     @Autowired
     private AccountRpository accountRepository;
-
-    @GetMapping("/registroform")
-    public String mostrarFormularioRegistro(Model model) {
-        model.addAttribute("cuenta", new Account());
-        return "registrarvista.html";
-    }
 
     @PostMapping(value = "/registrar")
     public ModelAndView agregarUsuario(@ModelAttribute("cuenta") Account cuenta, BindingResult bindingResult,

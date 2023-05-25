@@ -21,7 +21,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-
     @PostMapping(value = "/agregar")
     public ModelAndView agregarUsuario(@ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
         System.out.println(user.toString());
