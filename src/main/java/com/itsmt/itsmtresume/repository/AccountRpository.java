@@ -7,4 +7,5 @@ import com.itsmt.itsmtresume.models.Account;
 
 @Repository
 public interface AccountRpository extends JpaRepository<Account, Integer> {
+	// Account findByAccount(String correo);
 }
