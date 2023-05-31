@@ -36,7 +36,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/css/**",
                         "/images/**")
                 .permitAll()
-                .antMatchers("/login")
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .permitAll()
+                .and()
+                .logout()
+                .invalidateHttpSession(true)
+                .clearAuthentication(true)
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/login?logout")
+                .permitAll();
+                /*.antMatchers("/login")
                 .hasAuthority("USER")
                 .anyRequest()
                 .authenticated()
@@ -45,6 +57,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/login?logout");
+                .logoutSuccessUrl("/login?logout");*/
     }
 }
