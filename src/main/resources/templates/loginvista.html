@@ -10,19 +10,21 @@
 
 </head>  
 <body>
-    <form class="formulario">
+    <form class="formulario" th:action="@{/login}" method="post">
     
     <h1>Iniciar sesión</h1>
      <div class="contenedor">
-         <div class="input-contenedor">
+         <div class="input-contenedor form-group">
             <i class="fas fa-envelope icon"></i>
-            <input type="text" placeholder="Correo Electronico">
+            <input type="text" class = "form-control" id ="username" name = "username" autofocus="autofocus" placeholder="Correo Electronico">
          </div>
-         <div class="input-contenedor">
+         <div class="input-contenedor form-group">
             <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Contraseña">
+            <input type="password"
+                   id="password" name="password" class="form-control"
+                   placeholder="Contraseña">
          </div>
-         <input href="/resume" type="submit" value="Iniciar sesión" class="button">
+         <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-primary" value="Iniciar" />
         
          <p>¿No tienes una cuenta? <a class="link" href="/registroform">Crea una.</a></p>
      </div>
