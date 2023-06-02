@@ -68,6 +68,33 @@ public class User {
     @Column(name = "CedulaProfesional")
     private String cadula;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "clave")
+    private School school;
+    
+  //Constructores
+    public User() {
+    }
+
+    public User(String matricula, String nombre, String apellidos, String email, String contraseña, String direccion,
+            String curp, String telefono, LocalDate fechaNac, String carrera, String sexo, String noIMSS,
+            String prefesion, String cadula) {
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.email = email;
+        this.contraseña = contraseña;
+        this.direccion = direccion;
+        this.curp = curp;
+        this.telefono = telefono;
+        this.fechaNac = fechaNac;
+        this.carrera = carrera;
+        this.sexo = sexo;
+        this.noIMSS = noIMSS;
+        this.prefesion = prefesion;
+        this.cadula = cadula;
+    }
+
 
     //Metodos Getter and Setter
     public String getMatricula() {
@@ -181,35 +208,6 @@ public class User {
     public void setCadula(String cadula) {
         this.cadula = cadula;
     }
-
-
-    //Constructores
-    public User() {
-    }
-
-    public User(String matricula, String nombre, String apellidos, String email, String contraseña, String direccion,
-            String curp, String telefono, LocalDate fechaNac, String carrera, String sexo, String noIMSS,
-            String prefesion, String cadula) {
-        this.matricula = matricula;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.email = email;
-        this.contraseña = contraseña;
-        this.direccion = direccion;
-        this.curp = curp;
-        this.telefono = telefono;
-        this.fechaNac = fechaNac;
-        this.carrera = carrera;
-        this.sexo = sexo;
-        this.noIMSS = noIMSS;
-        this.prefesion = prefesion;
-        this.cadula = cadula;
-    }
-
-    //Relación de la clase usuario con la clase escuela
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "school")
-    private School school;
 
     public School getSchool() {
         return school;

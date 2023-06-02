@@ -20,7 +20,6 @@
 </header>
 
 <body scroll=no>
-        //aqui inicia el navbar
     <nav>
         <p class="logo-danicodex">
             <div class="container-buttons">
@@ -60,7 +59,7 @@
         <section class="questions container">
 
             <p class="questions__paragraph"></p>
-            <form method="POST" th:action="@{/resume/agregar}" th:object="${user}">   
+            <form method="POST" th:action="@{/resume/agregar}" th:object="${command}">   
             <section class="questions__container">
                 <article class="questions__padding">
                     
@@ -101,7 +100,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="matricula" name="Matricula" type="text" size="20" autocomplete="family-name" required th:field="*{matricula}" 
+                                        <input id="matricula" name="Matricula" type="text" size="20" autocomplete="family-name" required th:field="*{user.matricula}" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
                                 </div>
@@ -115,7 +114,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{nombre}" id="nombre" required
+                                        <input th:field="*{user.nombre}" id="nombre" required
                                           name="Nombre" type="text" size="20" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -131,7 +130,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{apellidos}" id="apellidos" required 
+                                        <input th:field="*{user.apellidos}" id="apellidos" required 
                                         data-s="Apellidos" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;" >
                                     </div>
@@ -150,7 +149,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{email}" id="email" placeholder="example@mail.com"
+                                        <input th:field="*{user.email}" id="email" placeholder="example@mail.com"
                                         data-s="Email" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -166,7 +165,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{direccion}" id="direccion" required
+                                        <input th:field="*{user.direccion}" id="direccion" required
                                         data-s="Direccion" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -182,7 +181,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{curp}" id="curp" required
+                                        <input th:field="*{user.curp}" id="curp" required
                                         data-s="CURP" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -201,7 +200,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{telefono}" id="telefono" required
+                                        <input th:field="*{user.telefono}" id="telefono" required
                                         data-s="Telefono" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -217,7 +216,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{fechaNac}" id="fechaNac" required
+                                        <input th:field="*{user.fechaNac}" id="fechaNac" required
                                         data-s="FechaNacimiento" type="date" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -233,7 +232,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{carrera}" id="carrera"  required
+                                        <input th:field="*{user.carrera}" id="carrera"  required
                                         data-s="Carrera" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -252,7 +251,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{sexo}" id="sexo"  
+                                        <input th:field="*{user.sexo}" id="sexo"  
                                         data-s="Sexo" type="text" size="20" 
                                         autocomplete="family-name" class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -269,7 +268,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{NoIMSS}" id="noIMSS" 
+                                        <input th:field="*{user.NoIMSS}" id="noIMSS" 
                                         data-s="NoIMSS" type="text" size="20" 
                                         autocomplete="family-name" class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -285,7 +284,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{prefesion}" id="profesion" 
+                                        <input th:field="*{user.prefesion}" id="profesion" 
                                         data-s="TituloProfesional" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -303,7 +302,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{cadula}" id="cedula" 
+                                        <input th:field="*{user.cadula}" id="cedula" 
                                         data-s="CedulaProfesional" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -312,7 +311,7 @@
                             </tr>
                            <tr>
                            <td>
-                            <input type="submit" value="Guardar cambios">
+                           <!--<input type="submit" value="Guardar cambios">-->
                            </td>
                            </tr>
                             </table>
@@ -343,7 +342,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.titulo}" id="focus-id-name-%{familyName}" 
                                           data-s="Titulo" type="text" size="20" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -359,7 +358,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.descripcion}" id="focus-id-name-%{familyName}" 
                                         data-s="Descripcion" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -378,7 +377,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.noHoras}" id="focus-id-name-%{familyName}" 
                                         data-s="NoHoras" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -394,7 +393,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.fechaExpedicion}" id="focus-id-name-%{familyName}" 
                                         data-s="FechaExpedicion" type="date" size="20" autocomplete="family-name" 
                                         class="form-control">
                                     </div>
@@ -410,7 +409,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.institucion}" id="focus-id-name-%{familyName}" 
                                         data-s="Institucion" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -429,7 +428,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.archivo}" id="focus-id-name-%{familyName}" 
                                         data-s="Telefono" type="file" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -465,7 +464,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}"
+                                        <input th:field="*{workExperience.puesto}" id="focus-id-name-%{familyName}"
                                           data-s="Puesto" type="text" size="20" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -481,7 +480,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{workExperience.lugar}" id="focus-id-name-%{familyName}" 
                                         data-s="Lugar" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -496,7 +495,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" placeholder="example@mail.com"
+                                        <input th:field="*{workExperience.fechaComienzo}" id="focus-id-name-%{familyName}" placeholder="example@mail.com"
                                         data-s="FechaComienzo" type="date" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -516,7 +515,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{workExperience.fechaTermino}" id="focus-id-name-%{familyName}" 
                                         data-s="FechaTermino" type="date" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -531,7 +530,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{workExperience.empresa}" id="focus-id-name-%{familyName}" 
                                         data-s="NombreEmpresa" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -549,7 +548,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{workExperience.descripcion}" id="focus-id-name-%{familyName}" 
                                         data-s="DescripciónFunciones" type="text" size="40" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -585,7 +584,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}"
+                                        <input th:field="*{skills.tipo}" id="focus-id-name-%{familyName}"
                                           data-s="Tipo" type="text" size="20" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -601,7 +600,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{skills.descripcion}" id="focus-id-name-%{familyName}" 
                                         data-s="Descripcion" type="text" size="50" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -638,7 +637,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}"
+                                        <input th:field="*{school.clave}" id="focus-id-name-%{familyName}"
                                           data-s="clave" type="text" size="30" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -654,7 +653,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.nombre}" id="focus-id-name-%{familyName}" 
                                         data-s="Nombre" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -673,7 +672,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" placeholder="example@mail.com"
+                                        <input th:field="*{school.municipio}" id="focus-id-name-%{familyName}" placeholder="example@mail.com"
                                         data-s="Municipio" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -689,7 +688,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.estado}" id="focus-id-name-%{familyName}" 
                                         data-s="Estado" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -705,7 +704,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.direccion}" id="focus-id-name-%{familyName}" 
                                         data-s="Direccion" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -724,7 +723,7 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.correo}" id="focus-id-name-%{familyName}" 
                                         data-s="CorreoElectronico" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -740,17 +739,19 @@
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.sitioWeb}" id="focus-id-name-%{familyName}" 
                                         data-s="SitioWeb" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
                                 </div>
                             </div></td>
 
-                           
-
                             </tr>
-                       
+                      		 <tr>
+                           		<td>
+                            		<input type="submit" value="Guardar cambios">
+                           </td>
+                           </tr>
                             </table>
                         </section>
                     </div>

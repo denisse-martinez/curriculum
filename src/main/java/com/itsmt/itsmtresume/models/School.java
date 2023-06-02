@@ -1,8 +1,13 @@
 package com.itsmt.itsmtresume.models;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -12,6 +17,7 @@ import javax.validation.constraints.NotEmpty;
 public class School {
     
     @Id
+    @Column(name = "Clave")
     private String clave;
 
     @Column(name = "Nombre")
@@ -36,6 +42,24 @@ public class School {
 
     @Column(name = "SitioWeb")
     private String sitioWeb;
+    
+    @OneToMany(mappedBy = "school")
+    private List<User> users;
+    
+  //Constructores
+    public School() {
+    }
+
+    public School(String clave, String nombre, String municipio, String estado, String direccion, String correo,
+            String sitioWeb) {
+        this.clave = clave;
+        this.nombre = nombre;
+        this.municipio = municipio;
+        this.estado = estado;
+        this.direccion = direccion;
+        this.correo = correo;
+        this.sitioWeb = sitioWeb;
+    }
 
     
     //Metodos Getter and Setter
@@ -95,21 +119,12 @@ public class School {
         this.sitioWeb = sitioWeb;
     }
 
+	public List<User> getUsers() {
+		return users;
+	}
 
-    //Constructores
-    public School() {
-    }
-
-    public School(String clave, String nombre, String municipio, String estado, String direccion, String correo,
-            String sitioWeb) {
-        this.clave = clave;
-        this.nombre = nombre;
-        this.municipio = municipio;
-        this.estado = estado;
-        this.direccion = direccion;
-        this.correo = correo;
-        this.sitioWeb = sitioWeb;
-    }
-
+	public void setUsers(List<User> users) {
+		this.users = users;
+	}
     
 }

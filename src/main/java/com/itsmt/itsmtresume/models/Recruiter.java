@@ -1,3 +1,4 @@
+/*
 package com.itsmt.itsmtresume.models;
 
 import javax.persistence.Column;
@@ -91,7 +92,7 @@ public class Recruiter {
         this.telefono = telefono;
         this.email = email;
         this.sitioWeb = sitioWeb;
-    }
+    }*/
 
     //Relacion entre la clase escuela y reclutadora
     //@NotEmpty
@@ -100,4 +101,4 @@ public class Recruiter {
                 //joinColumns = @JoinColumn(name = "recruiter_nombre"), 
                 //inverseJoinColumns = @JoinColumn(name = "school_clave")
               //)
-}
+//}
