@@ -29,8 +29,8 @@ public class UserController {
         Skills skills = command.getSkills();
         WorkExperience workExperience = command.getWorkExperience();
         SchoolExperience schoolExperience = command.getSchoolExperience();
-        model.addAttribute("index_2");
-        return "resume";
+        model.addAttribute("command", command);
+        return "redirect:/resume";
     }
 
 	/*
