@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AccountController {
 
-	@GetMapping(value = "/login")
-	public String login(Model model) {
-		return "loginvista.html";
-	}
-
 	@RequestMapping(value = "/registroform")
 	public String registrologin(Model model) {
 		return "registrarvista.html";

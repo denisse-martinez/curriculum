@@ -20,14 +20,12 @@ public class RegistroController {
 	@Autowired
 	private AccountRpository accountRepository;
 	
+	/*
 	@PostMapping(value = "/registrar")
 	public ModelAndView agregarUsuario(@ModelAttribute("cuenta") Account cuenta, BindingResult bindingResult,Model model) {
 		System.out.println(cuenta.toString());
 		accountRepository.save(cuenta);
 		ModelAndView mvar = new ModelAndView("loginvista");
-		System.out.println("Nombre: " + cuenta.getNombre());
-        System.out.println("Email: " + cuenta.getCorreo());
-        System.out.println("Contraseña: " + cuenta.getContraseña());
 		return mvar;
-	}
+	}*/
 }

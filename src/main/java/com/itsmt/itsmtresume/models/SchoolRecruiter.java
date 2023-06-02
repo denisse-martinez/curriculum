@@ -1,3 +1,4 @@
+/*
 package com.itsmt.itsmtresume.models;
 
 import java.io.Serializable;
@@ -73,7 +74,7 @@ public class SchoolRecruiter {
     private Recruiter recruiter;
 
     public SchoolRecruiter() {
-    }
+    }*/
 
    /* public SchoolRecruiter(String nombre, String estatusConvenio, School school, Recruiter recruiter) {
         this.nombre = nombre;
@@ -87,7 +88,7 @@ public class SchoolRecruiter {
         school.getSchoolRecruiters().add(this);
         recruiter.getSchoolRecruiters().add(this);
     }*/
-
+/*
     public Id getId() {
         return id;
     }
@@ -139,4 +140,4 @@ public class SchoolRecruiter {
 
     
     
-}
+}*/
