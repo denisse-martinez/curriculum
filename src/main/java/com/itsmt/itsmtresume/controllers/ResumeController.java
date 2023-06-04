@@ -2,7 +2,7 @@ package com.itsmt.itsmtresume.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.itsmt.itsmtresume.models.Command;
 import com.itsmt.itsmtresume.models.School;
@@ -14,7 +14,7 @@ import com.itsmt.itsmtresume.models.WorkExperience;
 @Controller
 public class ResumeController {
 	
-	@RequestMapping(value = "/resume")
+	@GetMapping("/resume")
 	public String mostrarFormulario(Model model) {
 	  Command command = new Command();
 	  command.setUser(new User());

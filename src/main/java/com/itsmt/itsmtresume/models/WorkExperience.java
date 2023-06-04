@@ -1,5 +1,6 @@
 package com.itsmt.itsmtresume.models;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -16,9 +17,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "experiencialaboral")
-public class WorkExperience {
-    
-    @Id
+public class WorkExperience implements Serializable{
+	
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -39,8 +45,28 @@ public class WorkExperience {
 
     @Column(name = "NombreEmpresa")
     private String empresa;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Usuario_Matricula")
+    private User user;
+    
+    public WorkExperience() {
+    }
 
-    public String getPuesto() {
+    public WorkExperience(int id, String puesto, String lugar, LocalDate fechaComienzo, LocalDate fechaTermino,
+			String descripcion, String empresa, User user) {
+		super();
+		this.id = id;
+		this.puesto = puesto;
+		this.lugar = lugar;
+		this.fechaComienzo = fechaComienzo;
+		this.fechaTermino = fechaTermino;
+		this.descripcion = descripcion;
+		this.empresa = empresa;
+		this.user = user;
+	}
+
+	public String getPuesto() {
         return puesto;
     }
 
@@ -95,24 +121,7 @@ public class WorkExperience {
     public void setId(int id) {
         this.id = id;
     }
-
-    public WorkExperience() {
-    }
-
-    public WorkExperience(String puesto, String lugar, LocalDate fechaComienzo, LocalDate fechaTermino,
-            String descripcion, String empresa) {
-        this.puesto = puesto;
-        this.lugar = lugar;
-        this.fechaComienzo = fechaComienzo;
-        this.fechaTermino = fechaTermino;
-        this.descripcion = descripcion;
-        this.empresa = empresa;
-    }
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user")
-    private User user;
-
+    
     public User getUser() {
         return user;
     }
@@ -120,5 +129,4 @@ public class WorkExperience {
     public void setUser(User user) {
         this.user = user;
     }
-    
 }

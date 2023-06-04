@@ -17,9 +17,31 @@ import com.itsmt.itsmtresume.models.WorkExperience;
 
 
 @Controller
-@RequestMapping(path = "/resume")
+@RequestMapping("/resume")
 public class UserController {
 	
+
+	    @PostMapping(value = "/agregar")
+	    public String agregarUsuario(@ModelAttribute("command") Command command, BindingResult bindingResult, Model model) {
+	        System.out.println(command.toString());
+	        User user = command.getUser();
+	        School school = command.getSchool();
+	        Skills skills = command.getSkills();
+	        WorkExperience workExperience = command.getWorkExperience();
+	        SchoolExperience schoolExperience = command.getSchoolExperience();
+	        
+	        // Agregar los objetos al modelo
+	        model.addAttribute("user", user);
+	        model.addAttribute("school", school);
+	        model.addAttribute("skills", skills);
+	        model.addAttribute("workExperience", workExperience);
+	        model.addAttribute("schoolExperience", schoolExperience);
+	        
+	        return "redirect:/resume";
+	    }
+	
+
+	/*
 
 	@PostMapping(value = "/agregar")
     public String agregarUsuario(@ModelAttribute("command") Command command, BindingResult bindingResult, Model model) {
@@ -32,7 +54,7 @@ public class UserController {
         model.addAttribute("command", command);
         return "redirect:/resume";
     }
-
+*/
 	/*
 	private final UserRepository userRepository;
 	private final SchoolExperienceRepository schoolExprienceRepository;
