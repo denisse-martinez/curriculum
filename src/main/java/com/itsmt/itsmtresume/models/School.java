@@ -1,12 +1,11 @@
 package com.itsmt.itsmtresume.models;
 
+import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
@@ -14,9 +13,14 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "escuela")
-public class School {
-    
-    @Id
+public class School implements Serializable{
+	
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @Column(name = "Clave")
     private String clave;
 

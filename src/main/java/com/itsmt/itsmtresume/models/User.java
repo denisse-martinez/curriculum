@@ -1,5 +1,6 @@
 package com.itsmt.itsmtresume.models;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -14,9 +15,14 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "usuario")
-public class User {
+public class User implements Serializable{
     
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @Column(name = "Matricula")
     @NotEmpty 
     private String matricula;
@@ -31,9 +37,6 @@ public class User {
 
     @Column(name = "Email")
     private String email;
-
-    @Column(name = "Contraseña")
-    private String contraseña;
 
     @Column(name = "Direccion")
     @NotEmpty
@@ -75,28 +78,30 @@ public class User {
   //Constructores
     public User() {
     }
-
-    public User(String matricula, String nombre, String apellidos, String email, String contraseña, String direccion,
-            String curp, String telefono, LocalDate fechaNac, String carrera, String sexo, String noIMSS,
-            String prefesion, String cadula) {
-        this.matricula = matricula;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.email = email;
-        this.contraseña = contraseña;
-        this.direccion = direccion;
-        this.curp = curp;
-        this.telefono = telefono;
-        this.fechaNac = fechaNac;
-        this.carrera = carrera;
-        this.sexo = sexo;
-        this.noIMSS = noIMSS;
-        this.prefesion = prefesion;
-        this.cadula = cadula;
+    
+    public User(@NotEmpty String matricula, @NotEmpty String nombre, @NotEmpty String apellidos, String email,
+		@NotEmpty String direccion, @NotEmpty String curp, @NotEmpty String telefono, LocalDate fechaNac,
+		@NotEmpty String carrera, @NotEmpty String sexo, @NotEmpty String noIMSS, String prefesion, String cadula,
+		School school) {
+		super();
+		this.matricula = matricula;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.email = email;
+		this.direccion = direccion;
+		this.curp = curp;
+		this.telefono = telefono;
+		this.fechaNac = fechaNac;
+		this.carrera = carrera;
+		this.sexo = sexo;
+		this.noIMSS = noIMSS;
+		this.prefesion = prefesion;
+		this.cadula = cadula;
+		this.school = school;
     }
 
 
-    //Metodos Getter and Setter
+	//Metodos Getter and Setter
     public String getMatricula() {
         return matricula;
     }
@@ -127,14 +132,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getContraseña() {
-        return contraseña;
-    }
-
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
     }
 
     public String getDireccion() {

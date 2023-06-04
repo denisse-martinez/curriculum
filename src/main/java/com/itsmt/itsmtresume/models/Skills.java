@@ -1,6 +1,8 @@
 package com.itsmt.itsmtresume.models;
 
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,9 +15,14 @@ import javax.persistence.JoinColumn;
 
 @Entity
 @Table(name = "habilidadespersona")
-public class Skills {
+public class Skills implements Serializable{
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -24,8 +31,24 @@ public class Skills {
 
     @Column(name = "Descripcion")
     private String descripcion;
+    
+    //Relación de clases
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Usuario_Matricula")
+    private User user;
+    
+    public Skills() {
+    }
 
-    public String getTipo() {
+    public Skills(int id, String tipo, String descripcion, User user) {
+		super();
+		this.id = id;
+		this.tipo = tipo;
+		this.descripcion = descripcion;
+		this.user = user;
+	}
+
+	public String getTipo() {
         return tipo;
     }
 
@@ -49,19 +72,6 @@ public class Skills {
         this.id = id;
     }
 
-    public Skills() {
-    }
-
-    public Skills(String tipo, String descripcion) {
-        this.tipo = tipo;
-        this.descripcion = descripcion;
-    }
-
-    //Relación de clases
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user")
-    private User user;
-
     public User getUser() {
         return user;
     }
@@ -69,8 +79,4 @@ public class Skills {
     public void setUser(User user) {
         this.user = user;
     }
-
-    
-    
-    
 }

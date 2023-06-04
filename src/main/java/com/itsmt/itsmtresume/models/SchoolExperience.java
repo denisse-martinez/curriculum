@@ -1,5 +1,6 @@
 package com.itsmt.itsmtresume.models;
 
+import java.io.Serializable;
 import java.sql.Blob;
 import java.time.LocalDate;
 
@@ -9,15 +10,20 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "experienciaescolar")
-public class SchoolExperience {
+public class SchoolExperience implements Serializable{
     
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
@@ -38,8 +44,29 @@ public class SchoolExperience {
 
     @Column(name = "Archivo")
     private Blob archivo;
+    
+  //Relacion con usuario
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Usuario_Matricula")
+    private User user;
+    
+    public SchoolExperience() {
+    }
+    
+    public SchoolExperience(int id, String titulo, String descripcion, int noHoras, LocalDate fechaExpedicion,
+			String institucion, Blob archivo, User user) {
+		super();
+		this.id = id;
+		this.titulo = titulo;
+		this.descripcion = descripcion;
+		this.noHoras = noHoras;
+		this.fechaExpedicion = fechaExpedicion;
+		this.institucion = institucion;
+		this.archivo = archivo;
+		this.user = user;
+	}
 
-    public String getTitulo() {
+	public String getTitulo() {
         return titulo;
     }
 
@@ -94,26 +121,7 @@ public class SchoolExperience {
     public void setId(int id) {
         this.id = id;
     }
-    
-
-    public SchoolExperience() {
-    }
-
-    public SchoolExperience(String titulo, String descripcion, int noHoras, LocalDate fechaExpedicion,
-            String institucion, Blob archivo) {
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.noHoras = noHoras;
-        this.fechaExpedicion = fechaExpedicion;
-        this.institucion = institucion;
-        this.archivo = archivo;
-    }
-
-    //Relacion con usuario
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user")
-    private User user;
-
+   
     public User getUser() {
         return user;
     }
@@ -121,5 +129,4 @@ public class SchoolExperience {
     public void setUser(User user) {
         this.user = user;
     }
-
 }
