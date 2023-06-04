@@ -40,11 +40,11 @@ public class School implements Serializable{
     @NotEmpty
     private String direccion;
 
-    @Column(name = "CorreoElectronico")
+    @Column(name = "correo_electronico")
     @Email
     private String correo;
 
-    @Column(name = "SitioWeb")
+    @Column(name = "sitio_web")
     private String sitioWeb;
     
     @OneToMany(mappedBy = "school")

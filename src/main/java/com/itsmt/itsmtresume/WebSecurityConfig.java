@@ -36,6 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/css/**",
                         "/images/**")
                 .permitAll()
+                .antMatchers("/resume/agregar").authenticated()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
