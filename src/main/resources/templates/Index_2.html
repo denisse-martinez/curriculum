@@ -59,7 +59,7 @@
         <section class="questions container">
 
             <p class="questions__paragraph"></p>
-            <form method="POST" th:action="@{/agregar}" th:object="${command}">   
+            <form method="POST" th:action="@{/resume/agregar}" th:object="${command}">
             <section class="questions__container">
                 <article class="questions__padding">
                     
@@ -95,7 +95,7 @@
                                         <div class="w-full sm:flex-equal-width px-2">
                                         <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                            class="flex-grow truncate block font-medium text-gray-600 text-sm">Matricula
                                         </label>
                                     </div>
@@ -109,7 +109,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                            class="flex-grow truncate block font-medium text-gray-600 text-sm">Nombre
                                         </label>
                                     </div>
@@ -124,7 +124,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Apellidos
 
                                         </label>
@@ -143,7 +143,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Email
 
                                         </label>
@@ -159,7 +159,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Dirección
 
                                         </label>
@@ -175,7 +175,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">CURP
 
                                         </label>
@@ -194,7 +194,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Teléfono
 
                                         </label>
@@ -210,7 +210,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Fecha de Nacimiento
 
                                         </label>
@@ -226,7 +226,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Carrera 
 
                                         </label>
@@ -245,7 +245,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Sexo
 
                                         </label>
@@ -261,14 +261,14 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Número de seguro social <br>
                                         (IMSS)
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{user.NoIMSS}" id="noIMSS" 
+                                        <input th:field="*{user.NoIMSS}" id="noIMSS"
                                         data-s="NoIMSS" type="text" size="20" 
                                         autocomplete="family-name" class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -278,7 +278,7 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Titulo profecional
 
                                         </label>
@@ -296,13 +296,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Cedula profesional
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{user.cadula}" id="cedula" 
+                                        <input th:field="*{user.cedula}" id="cedula"
                                         data-s="CedulaProfesional" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -337,12 +337,12 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                            class="flex-grow truncate block font-medium text-gray-600 text-sm">Título
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{schoolExperience.titulo}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.titulo}" id="titulo"
                                           data-s="Titulo" type="text" size="20" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -352,13 +352,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Descripción
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{schoolExperience.descripcion}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.descripcion}" id="descripcion"
                                         data-s="Descripcion" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -371,13 +371,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Número de horas del curso
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{schoolExperience.noHoras}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.noHoras}" id="noHoras"
                                         data-s="NoHoras" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -387,13 +387,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Fecha de expedición
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{schoolExperience.fechaExpedicion}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.fechaExpedicion}" id="fecha_exp"
                                         data-s="FechaExpedicion" type="date" size="20" autocomplete="family-name" 
                                         class="form-control">
                                     </div>
@@ -403,13 +403,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Institución
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{schoolExperience.institucion}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.institucion}" id="institucion"
                                         data-s="Institucion" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -422,13 +422,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Archivo
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{schoolExperience.archivo}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{schoolExperience.archivo}" id="archivo"
                                         data-s="Telefono" type="file" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -459,12 +459,12 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                            class="flex-grow truncate block font-medium text-gray-600 text-sm">Puesto
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{workExperience.puesto}" id="focus-id-name-%{familyName}"
+                                        <input th:field="*{workExperience.puesto}" id="puesto"
                                           data-s="Puesto" type="text" size="20" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -474,13 +474,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Lugar
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{workExperience.lugar}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{workExperience.lugar}" id="lugar"
                                         data-s="Lugar" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -489,13 +489,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Fecha de inicio 
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{workExperience.fechaComienzo}" id="focus-id-name-%{familyName}" placeholder="example@mail.com"
+                                        <input th:field="*{workExperience.fechaComienzo}" id="fech_inic" placeholder="example@mail.com"
                                         data-s="FechaComienzo" type="date" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -509,13 +509,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Fecha final laboral
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{workExperience.fechaTermino}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{workExperience.fechaTermino}" id="fecha_final"
                                         data-s="FechaTermino" type="date" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -524,13 +524,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Nombre de la empresa
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{workExperience.empresa}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{workExperience.empresa}" id="nombre_emp"
                                         data-s="NombreEmpresa" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -542,13 +542,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Descripción de las funciones
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{workExperience.descripcion}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{workExperience.descripcion}" id="des_fun"
                                         data-s="DescripciónFunciones" type="text" size="40" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -579,12 +579,12 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                            class="flex-grow truncate block font-medium text-gray-600 text-sm">Tipo de habilidad
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{skills.tipo}" id="focus-id-name-%{familyName}"
+                                        <input th:field="*{skills.tipo}" id="tipo_hab"
                                           data-s="Tipo" type="text" size="20" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -594,13 +594,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Descripción
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{skills.descripcion}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{skills.descripcion}" id="descrip"
                                         data-s="Descripcion" type="text" size="50" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -632,12 +632,12 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                            class="flex-grow truncate block font-medium text-gray-600 text-sm">Clave
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{school.clave}" id="focus-id-name-%{familyName}"
+                                        <input th:field="*{school.clave}" id="clave"
                                           data-s="clave" type="text" size="30" autocomplete="family-name" 
                                           class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -647,13 +647,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Nombre
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{school.nombre}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.nombre}" id="nombre"
                                         data-s="Nombre" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -666,13 +666,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Municipio
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{school.municipio}" id="focus-id-name-%{familyName}" placeholder="example@mail.com"
+                                        <input th:field="*{school.municipio}" id="municipio" placeholder="example@mail.com"
                                         data-s="Municipio" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -682,13 +682,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Estado
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{school.estado}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.estado}" id="estado"
                                         data-s="Estado" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -698,13 +698,13 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
+                                        <label for="focus-id-name-%{familyName}"
                                         class="flex-grow truncate block font-medium text-gray-600 text-sm">Direccion
 
                                         </label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{school.direccion}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.direccion}" id="direccion_escuela"
                                         data-s="Direccion" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -717,13 +717,10 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
-                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Correo Electronico
-
-                                        </label>
+                                        <label class="flex-grow truncate block font-medium text-gray-600 text-sm">Correo Electronico</label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{school.correo}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.correo}" id="correo_elect"
                                         data-s="CorreoElectronico" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -733,13 +730,10 @@
                             <td><div class="w-full sm:flex-equal-width px-2">
                                 <div class="py-2">
                                     <div class="flex items-center mb-1">
-                                        <label for="focus-id-name-%{familyName}" 
-                                        class="flex-grow truncate block font-medium text-gray-600 text-sm">Sitio web
-
-                                        </label>
+                                        <label class="flex-grow truncate block font-medium text-gray-600 text-sm">Sitio web</label>
                                     </div>
                                     <div class="relative">
-                                        <input th:field="*{school.sitioWeb}" id="focus-id-name-%{familyName}" 
+                                        <input th:field="*{school.sitioWeb}" id="sitio_web"
                                         data-s="SitioWeb" type="text" size="20" autocomplete="family-name" 
                                         class="w-full appearance-none border focus:border-brand-400 focus:bg-brand-50 rounded py-2 px-3 text-base transition-colors duration-150 text-gray-400 border-transparent bg-gray-100 " value="" style="outline: none; direction: ltr;">
                                     </div>
@@ -762,9 +756,7 @@
         </form> 
     </div>
 
-     <div class="fondo2 container" >
-
-     </div>
+     <div class="fondo2 container" ></div>
    </div>
 
    <script src="./js/questions.js"></script>

@@ -34,7 +34,7 @@ public class Skills implements Serializable{
     
     //Relación de clases
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Usuario_Matricula")
+    @JoinColumn(name = "usuario_matricula")
     private User user;
     
     public Skills() {

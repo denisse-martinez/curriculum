@@ -1,5 +1,6 @@
 package com.itsmt.itsmtresume.controllers;
 
+import com.itsmt.itsmtresume.repository.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,19 +18,39 @@ import com.itsmt.itsmtresume.models.WorkExperience;
 
 
 @Controller
-@RequestMapping("/resume")
+@RequestMapping(path = "/resume")
 public class UserController {
-	
+
+
+	private final UserRepository userRepository;
+	private final SchoolExperienceRepository schoolExprienceRepository;
+	private final SkillsRepository skillsRepository;
+	private final SchoolRepository schoolRepository;
+	private final WorkExperienceRepository workExperienceRepository;
+
+	public UserController(UserRepository userRepository, SchoolExperienceRepository schoolExprienceRepository,
+			SkillsRepository skillsRepository, SchoolRepository schoolRepository,
+			WorkExperienceRepository workExperienceRepository) {
+		super();
+		this.userRepository = userRepository;
+		this.schoolExprienceRepository = schoolExprienceRepository;
+		this.skillsRepository = skillsRepository;
+		this.schoolRepository = schoolRepository;
+		this.workExperienceRepository = workExperienceRepository;
+	}
 
 	    @PostMapping(value = "/agregar")
 	    public String agregarUsuario(@ModelAttribute("command") Command command, BindingResult bindingResult, Model model) {
 	        System.out.println(command.toString());
 	        User user = command.getUser();
-	        School school = command.getSchool();
+			SchoolExperience schoolExperience = command.getSchoolExperience();
+			WorkExperience workExperience = command.getWorkExperience();
 	        Skills skills = command.getSkills();
-	        WorkExperience workExperience = command.getWorkExperience();
-	        SchoolExperience schoolExperience = command.getSchoolExperience();
-	        
+			School school = command.getSchool();
+			userRepository.save(user);
+			schoolExprienceRepository.save(schoolExperience);
+			//workExperienceRepository.save(workExperience);
+			//schoolRepository.save(school);
 	        // Agregar los objetos al modelo
 	        model.addAttribute("user", user);
 	        model.addAttribute("school", school);
@@ -55,23 +76,7 @@ public class UserController {
         return "redirect:/resume";
     }
 */
-	/*
-	private final UserRepository userRepository;
-	private final SchoolExperienceRepository schoolExprienceRepository;
-	private final SkillsRepository skillsRepository;
-	private final SchoolRepository schoolRepository;
-	private final WorkExperienceRepository workExperienceRepository;
-	
-	public UserController(UserRepository userRepository, SchoolExperienceRepository schoolExprienceRepository,
-			SkillsRepository skillsRepository, SchoolRepository schoolRepository,
-			WorkExperienceRepository workExperienceRepository) {
-		super();
-		this.userRepository = userRepository;
-		this.schoolExprienceRepository = schoolExprienceRepository;
-		this.skillsRepository = skillsRepository;
-		this.schoolRepository = schoolRepository;
-		this.workExperienceRepository = workExperienceRepository;
-	}*/
+
 	
 	
 	/*@PostMapping("/registro")

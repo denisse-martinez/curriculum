@@ -50,7 +50,7 @@ public class User implements Serializable{
     @NotEmpty
     private String telefono;
 
-    @Column(name = "FechaNacimiento")
+    @Column(name = "fecha_nac")
     private LocalDate fechaNac;
 
     @Column(name = "Carrera")
@@ -65,11 +65,11 @@ public class User implements Serializable{
     @NotEmpty 
     private String noIMSS;
 
-    @Column(name = "TituloProfesional")
+    @Column(name = "titulo_prof")
     private String prefesion;
 
-    @Column(name = "CedulaProfesional")
-    private String cadula;
+    @Column(name = "cedula_prof")
+    private String cedula;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "clave")
@@ -81,7 +81,7 @@ public class User implements Serializable{
     
     public User(@NotEmpty String matricula, @NotEmpty String nombre, @NotEmpty String apellidos, String email,
 		@NotEmpty String direccion, @NotEmpty String curp, @NotEmpty String telefono, LocalDate fechaNac,
-		@NotEmpty String carrera, @NotEmpty String sexo, @NotEmpty String noIMSS, String prefesion, String cadula,
+		@NotEmpty String carrera, @NotEmpty String sexo, @NotEmpty String noIMSS, String prefesion, String cedula,
 		School school) {
 		super();
 		this.matricula = matricula;
@@ -96,7 +96,7 @@ public class User implements Serializable{
 		this.sexo = sexo;
 		this.noIMSS = noIMSS;
 		this.prefesion = prefesion;
-		this.cadula = cadula;
+		this.cedula = cedula;
 		this.school = school;
     }
 
@@ -198,12 +198,12 @@ public class User implements Serializable{
         this.prefesion = prefesion;
     }
 
-    public String getCadula() {
-        return cadula;
+    public String getCedula() {
+        return cedula;
     }
 
-    public void setCadula(String cadula) {
-        this.cadula = cadula;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public School getSchool() {

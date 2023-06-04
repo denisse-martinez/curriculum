@@ -27,34 +27,34 @@ public class SchoolExperience implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
-    @Column(name = "Titutlo")
+    @Column(name = "Titulo")
     private String titulo;
 
     @Column(name = "Descripcion")
     private String descripcion;
 
-    @Column(name = "NoHoras")
+    @Column(name = "no_horas")
     private int noHoras;
 
-    @Column(name = "FechaExpedicion")
+    @Column(name = "fecha_exp")
     private LocalDate fechaExpedicion;
 
     @Column(name = "Institucion")
     private String institucion;
 
-    @Column(name = "Archivo")
-    private Blob archivo;
+    //@Column(name = "Archivo")
+    //private Blob archivo;
     
   //Relacion con usuario
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Usuario_Matricula")
+    @JoinColumn(name = "usuario_matricula")
     private User user;
     
     public SchoolExperience() {
     }
     
     public SchoolExperience(int id, String titulo, String descripcion, int noHoras, LocalDate fechaExpedicion,
-			String institucion, Blob archivo, User user) {
+			String institucion, User user) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
@@ -62,7 +62,6 @@ public class SchoolExperience implements Serializable{
 		this.noHoras = noHoras;
 		this.fechaExpedicion = fechaExpedicion;
 		this.institucion = institucion;
-		this.archivo = archivo;
 		this.user = user;
 	}
 
@@ -104,14 +103,6 @@ public class SchoolExperience implements Serializable{
 
     public void setInstitucion(String institucion) {
         this.institucion = institucion;
-    }
-
-    public Blob getArchivo() {
-        return archivo;
-    }
-
-    public void setArchivo(Blob archivo) {
-        this.archivo = archivo;
     }
 
     public int getId() {

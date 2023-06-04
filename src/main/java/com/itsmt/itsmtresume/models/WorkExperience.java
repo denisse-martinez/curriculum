@@ -34,20 +34,20 @@ public class WorkExperience implements Serializable{
     @Column(name= "Lugar")
     private String lugar;
 
-    @Column(name = "FechaComienzo")
+    @Column(name = "fecha_comienzo")
     private LocalDate fechaComienzo;
 
-    @Column(name = "FechaTermino")
+    @Column(name = "fecha_termino")
     private LocalDate fechaTermino;
 
-    @Column(name = "DescripcionFunciones")
+    @Column(name = "descripcion_funciones")
     private String descripcion;
 
-    @Column(name = "NombreEmpresa")
+    @Column(name = "nombre_empresa")
     private String empresa;
     
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Usuario_Matricula")
+    @JoinColumn(name = "usuario_matricula")
     private User user;
     
     public WorkExperience() {
