@@ -25,23 +25,18 @@ public class School implements Serializable{
     private String clave;
 
     @Column(name = "Nombre")
-    @NotEmpty
     private String nombre;
 
     @Column(name = "Municipio")
-    @NotEmpty
     private String municipio;
 
     @Column(name = "Estado")
-    @NotEmpty
     private String estado;
 
     @Column(name = "Direccion")
-    @NotEmpty
     private String direccion;
 
     @Column(name = "correo_electronico")
-    @Email
     private String correo;
 
     @Column(name = "sitio_web")

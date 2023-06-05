@@ -26,6 +26,7 @@ public class WorkExperience implements Serializable{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_expLab")
     private int id;
 
     @Column(name = "Puesto")
