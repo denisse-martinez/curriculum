@@ -25,6 +25,7 @@ public class SchoolExperience implements Serializable{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_titulo")
     private int id;
     
     @Column(name = "Titulo")

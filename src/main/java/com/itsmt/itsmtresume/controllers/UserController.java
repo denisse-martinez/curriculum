@@ -49,16 +49,10 @@ public class UserController {
 			School school = command.getSchool();
 			userRepository.save(user);
 			schoolExprienceRepository.save(schoolExperience);
-			//workExperienceRepository.save(workExperience);
-			//schoolRepository.save(school);
-	        // Agregar los objetos al modelo
-	        model.addAttribute("user", user);
-	        model.addAttribute("school", school);
-	        model.addAttribute("skills", skills);
-	        model.addAttribute("workExperience", workExperience);
-	        model.addAttribute("schoolExperience", schoolExperience);
-	        
-	        return "redirect:/resume";
+			workExperienceRepository.save(workExperience);
+			skillsRepository.save(skills);
+			schoolRepository.save(school); 
+	        return "Index_2";
 	    }
 	
 

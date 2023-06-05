@@ -24,6 +24,7 @@ public class Skills implements Serializable{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_hab")
     private int id;
 
     @Column(name = "Tipo")
